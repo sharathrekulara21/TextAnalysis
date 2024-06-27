@@ -98,11 +98,8 @@ def avg_word_length(input_data):
         c+=len(w)
     return c/len(words)
 
-inpu = requests.get("https://docs.google.com/spreadsheets/d/1D7QkDHxUSKnQhR--q0BAwKMxQlUyoJTQ/export?format=csv")
-with open("Input.csv",'wb') as f:
-    f.write(inpu.content)
-gdown.download("https://drive.google.com/file/d/1seAj8G42SmfgUUx8lqVDJofm4Tuh2TOT/view?usp=drive_link","positive-words.txt",fuzzy=True)
-gdown.download("https://drive.google.com/file/d/1qqMwc_-ayS38HEOB97osO_nkIxRkbnvh/view?usp=drive_link","negative-words.txt",fuzzy=True)
+gdown.download("Inset the google drive links for the positive-words",fuzzy=True)
+gdown.download("Insert drive link","negative-words.txt",fuzzy=True)
 input_data = pd.read_csv("Input.csv")
 output_data = pd.read_excel("Output Data Structure.xlsx")
 for i in range(len(input_data)):
